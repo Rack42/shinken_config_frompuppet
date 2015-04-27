@@ -5,7 +5,7 @@ define host {
 	use		{{ template }}
 	host_name	{{ name }}
 	address		{{ macros['Shinken::Packs::Host']['address'] }}
-        aliasname       {% if macros['Shinken::Packs::Host']['aliasname'] %}{{macros['Shinken::Packs::Host']['aliasname']}}{% else %}{{ name }}{% endif %}
+        alias           {% if macros['Shinken::Packs::Host']['aliasname'] %}{{macros['Shinken::Packs::Host']['aliasname']}}{% else %}{{ name }}{% endif %}
 	realm		{{ macros['Shinken::Packs::Host']['realm'] }}
         business_impact {{ macros['Shinken::Packs::Host']['business_impact'] }}
         hostgroups      {{ macros['Shinken::Packs::Host']['hostgroup'] }}
